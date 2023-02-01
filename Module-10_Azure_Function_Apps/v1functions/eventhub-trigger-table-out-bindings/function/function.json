@@ -1,0 +1,21 @@
+{
+  "bindings": [
+    {
+      "type": "eventHubTrigger",
+      "name": "myEventHubMessage",
+      "path": "<eventhub-entitiy-name>",
+      "consumerGroup": "$Default",
+      "connection": "<eventhub-namespace>_<SAS-policy-name>_EVENTHUB",
+      "cardinality": "one",
+      "direction": "in"
+    },
+    {
+      "type": "table",
+      "name": "outputTable",
+      "tableName": "<table-name>",
+      "connection": "<storage-account-name>_STORAGE",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
